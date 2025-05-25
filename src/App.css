@@ -12,6 +12,10 @@
   align-items: center;
 }
 
+.social-icons {
+  margin: 2rem;
+}
+
 @keyframes scrollBanner {
   0% {
     transform: translateX(0%);
