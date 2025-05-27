@@ -12,9 +12,13 @@ function App() {
   return (
     <>
       <Nav />
-      <Profile />
-      <div>
-        <p>Hi, I'm Sumit Rajpal Software Developer Experienced Software Developer & Tech Lead specializing in scalable systems. I craft robust backends and seamless frontends, delivering high-performance web apps with smooth UX. Let’s build something amazing together! ⚙️✨</p>
+      <div className="main-content">
+        <div className="profile-left">
+          <Profile />
+        </div>
+        <div className='Profile-right'>
+          <p>Hi, I'm Sumit Rajpal Software Developer Experienced Software Developer & Tech Lead specializing in scalable systems. I craft robust backends and seamless frontends, delivering high-performance web apps with smooth UX. Let’s build something amazing together! ⚙️✨</p>
+        </div>
       </div>
       {/* <Skill /> */}
     </>
