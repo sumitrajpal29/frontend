@@ -11,27 +11,31 @@ export default function Profile() {
     const email = 'sumitrajpal29@gmail.com';
 
     return <div>
-        <img
-            style={{
-                maxWidth: '10rem',
-                borderRadius: '50%',
-                objectFit: 'cover'
-            }}
-            src={image}
-            alt="Profile"
-        />
+        <div className="profile-img-animated-border">
+            <div className="profile-img-inner">
+                <img
+                    // style={{
+                    //     maxWidth: '10rem',
+                    //     borderRadius: '50%',
+                    //     objectFit: 'cover'
+                    // }}
+                    src={image}
+                    alt="Profile"
+                />
+            </div>
+        </div>
 
-        <div>
-            <a className="social-icons" href={githubUrl} target="_blank" rel="noopener noreferrer">
+        <div className="social-icons">
+            <a href={githubUrl} target="_blank" rel="noopener noreferrer">
                 <FaGithub size={30} />
             </a>
-            <a className="social-icons" href={linkedinUrl} target="_blank" rel="noopener noreferrer">
+            <a href={linkedinUrl} target="_blank" rel="noopener noreferrer">
                 <FaLinkedin size={30} />
             </a>
-            <a className="social-icons" href={leetcodeUrl} target="_blank" rel="noopener noreferrer">
+            <a href={leetcodeUrl} target="_blank" rel="noopener noreferrer">
                 <SiLeetcode size={30} />
             </a>
-            <a className="social-icons" href={`mailto:${email}`} target="_blank" rel="noopener noreferrer">
+            <a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer">
                 <FaEnvelope size={30} />
             </a>
         </div>
