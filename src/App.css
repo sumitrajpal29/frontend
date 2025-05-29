@@ -1,8 +1,70 @@
 #root {
   /* max-width: 1280px; */
+  /* max-width: 1280px; */
   margin: 0 auto;
   padding: 1rem;
   /* text-align: center; */
+}
+
+.profile-img-animated-border {
+  position: relative;
+  display: inline-block;
+  width: 160px;
+  /* adjust as needed */
+  height: 160px;
+  /* adjust as needed */
+
+  margin: 3rem;
+}
+
+.profile-img-animated-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  padding: 0;
+  z-index: 1;
+  background:
+    conic-gradient(from 0deg, #00fff0 0%, #6a82fb 25%, #fc5c7d 50%, #f7971e 75%, #00fff0 100%),
+    repeating-conic-gradient(from 45deg, #fff0 0deg 10deg, #00fff0 10deg 20deg);
+  animation: futuristic-spin 4s linear infinite;
+  box-shadow: 0 0 40px #00fff088, 0 0 8px #6a82fb88;
+  transition: animation-duration 0.2s;
+}
+
+.profile-img-animated-border:hover::before {
+  animation-duration: 1s;
+}
+
+.profile-img-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #111;
+  border-radius: 50%;
+  /* padding: 8px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 24px #00fff044;
+  width: 140px;
+  /* adjust as needed */
+  height: 140px;
+  /* adjust as needed */
+  z-index: 2;
+}
+
+.profile-img-inner img {
+  display: block;
+  border-radius: 50%;
+  width: 145px;
+  /* adjust as needed */
+  height: 145px;
+  /* adjust as needed */
+  object-fit: cover;
+  border: 2px solid #222;
+  background: none;
 }
 
 .main-content {
@@ -18,8 +80,16 @@
   align-items: flex-start;
 }
 
+.profile-center {
+  display: flex;
+  max-width: 40%;
+  flex-direction: column;
+}
+
 .profile-right {
-  flex: 2;
+  display: flex;
+  max-width: 10%;
+  flex-direction: column;
   padding-left: 2rem;
   text-align: left;
 }
@@ -42,6 +112,8 @@
 
 .social-icons {
   margin: 0.5rem;
+  display: flex;
+  justify-content: space-around;
 }
 
 @keyframes scrollBanner {
@@ -57,7 +129,18 @@
 .nav-bar {
   display: flex;
   justify-content: center;
+  justify-content: center;
   align-items: center;
+  /* Border setup */
+  /* width: 100%; */
+  border: 2px solid #ccc;
+  border-radius: 2rem;
+  padding: 0.5rem 2rem;
+  background: #fff;
+  box-shadow: 0 2px 8px #0001;
+  /* Instead of setting margin and width, we can add border to nav-list */
+  margin: 0 auto;
+  width: fit-content;
   /* Border setup */
   /* width: 100%; */
   border: 2px solid #ccc;
@@ -76,6 +159,10 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .logo {
@@ -86,14 +173,19 @@
 }
 
 /* .logo:hover {
+/* .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 } */
+}
 
+*/
+/* .logo.react:hover {
 /* .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 } */
+}
 
-@keyframes logo-spin {
+*/ @keyframes logo-spin {
   from {
     transform: rotate(0deg);
   }
@@ -110,9 +202,17 @@
 }
 
 /* .card {
+/* .card {
   padding: 2em;
 } */
+}
 
-.read-the-docs {
+*/ .read-the-docs {
   color: #888;
+}
+
+@keyframes futuristic-spin {
+  100% {
+    transform: rotate(360deg);
+  }
 }

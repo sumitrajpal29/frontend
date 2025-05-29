@@ -8,6 +8,7 @@ import Profile from './components/Profile'
 
 function App() {
   const [count, setCount] = useState(0)
+  const styleForText = { margin: '4rem' };
 
   return (
     <>
@@ -16,11 +17,11 @@ function App() {
         <div className="profile-left">
           <Profile />
         </div>
-        <div className='profile-right'>
-          <p>Hi, I'm Sumit Rajpal Software Developer Experienced Software Developer & Tech Lead specializing in scalable systems. I craft robust backends and seamless frontends, delivering high-performance web apps with smooth UX. Let’s build something amazing together! ⚙️✨</p>
+        <div style={styleForText}>
+          <p>Hi, I’m Sumit Rajpal — a Full Stack Developer specializing in the MERN stack. I build scalable backends and intuitive frontends to deliver high-performance web applications with smooth, user-friendly experiences. Let’s collaborate and create something impactful! ⚙️🚀</p>
         </div>
       </div>
-      <Skill />
+      {/* <Skill /> */}
     </>
   )
 }
