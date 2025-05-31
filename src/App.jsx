@@ -1,15 +1,10 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Nav from './components/Nav'
 import Skill from './components/Skill'
 import Profile from './components/Profile'
 
 function App() {
-  const [count, setCount] = useState(0)
   const styleForText = { margin: '4rem' };
-
   return (
     <>
       <Nav />
@@ -21,7 +16,7 @@ function App() {
           <p>Hi, I’m Sumit Rajpal — a Full Stack Developer specializing in the MERN stack. I build scalable backends and intuitive frontends to deliver high-performance web applications with smooth, user-friendly experiences. Let’s collaborate and create something impactful! ⚙️🚀</p>
         </div>
       </div>
-      {/* <Skill /> */}
+      <Skill />
     </>
   )
 }
