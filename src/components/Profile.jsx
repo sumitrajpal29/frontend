@@ -35,7 +35,7 @@ export default function Profile() {
             <a href={leetcodeUrl} target="_blank" rel="noopener noreferrer">
                 <SiLeetcode size={30} />
             </a>
-            <a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer">
+            <a href={`mailto:${email}`} rel="noopener noreferrer">
                 <FaEnvelope size={30} />
             </a>
         </div>

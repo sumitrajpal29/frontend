@@ -1,5 +1,8 @@
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+
 export default function Nav() {
     return (
+        // <div>
         <nav className="nav-bar">
             <ul className="nav-list">
                 <li>
@@ -15,6 +18,8 @@ export default function Nav() {
                     <a href="#">Contact</a>
                 </li>
             </ul>
+            <button><FaEnvelope></FaEnvelope></button>
         </nav>
+        // </div>
     );
 }
