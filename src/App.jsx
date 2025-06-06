@@ -2,9 +2,13 @@ import './App.css'
 import Nav from './components/Nav'
 import Skill from './components/Skill'
 import Profile from './components/Profile'
+import { useState } from 'react';
 
 function App() {
   const styleForText = { margin: '4rem' };
+  // const [theme, setTheme] = useState("dark");
+  // document.body.className = "dark-theme"
+
   return (
     <>
       {/* Fixed and lil transparent will look nicer */}

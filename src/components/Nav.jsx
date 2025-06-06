@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 export default function Nav() {
+    const [theme, setTheme] = useState(false);
+    document.body.className = theme ? "dark-theme" : "";
     return (
         // <div>
         <nav className="nav-bar">
@@ -18,7 +21,7 @@ export default function Nav() {
                     <a href="#">Contact</a>
                 </li>
             </ul>
-            <button><FaEnvelope></FaEnvelope></button>
+            <button onClick={() => { setTheme(!theme) }}><FaEnvelope></FaEnvelope></button>
         </nav>
         // </div>
     );
