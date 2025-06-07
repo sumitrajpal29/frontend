@@ -22,15 +22,33 @@
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
-  transition: background 0.3s, color 0.3s;
+  transition: background 0.7s, color 0.7s;
 }
 
-.roundButton {
-  /* background-color: var(--text-color); */
-  border-radius: 50%;
+/* .roundButton {
+  color: var(--text-color);
+  background: none border-radius: 50%;
   border-style: none;
+  background-color: none;
   padding: 0.5rem
+} */
+.roundButton {
+  color: var(--text-color);
+  background: none !important;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  box-shadow: none;
+  padding: 0.5rem;
+  cursor: pointer;
 }
+
+/* .roundButton:active,
+.roundButton:active {
+  outline: none;
+  border: none;
+  box-shadow: none;
+} */
 
 
 .profile-img-animated-border {
