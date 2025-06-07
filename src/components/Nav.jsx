@@ -1,9 +1,13 @@
 import { useState } from 'react';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaMoon, FaSun } from 'react-icons/fa';
 
 export default function Nav() {
     const [theme, setTheme] = useState(false);
     document.body.className = theme ? "dark-theme" : "";
+
+    function toggleTheme() {
+        setTheme(!theme);
+    }
     return (
         // <div>
         <nav className="nav-bar">
@@ -21,7 +25,7 @@ export default function Nav() {
                     <a href="#">Contact</a>
                 </li>
             </ul>
-            <button onClick={() => { setTheme(!theme) }}><FaEnvelope></FaEnvelope></button>
+            <button className='roundButton' onClick={toggleTheme}>{theme ? <FaSun /> : <FaMoon />}</button>
         </nav>
         // </div>
     );

@@ -10,17 +10,26 @@
 :root {
   --bg-color: white;
   --text-color: black;
+  --nav-box-shadow: black;
 }
 
 .dark-theme {
   --bg-color: #121212;
   --text-color: white;
+  --nav-box-shadow: white;
 }
 
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background 0.3s, color 0.3s;
+}
+
+.roundButton {
+  /* background-color: var(--text-color); */
+  border-radius: 50%;
+  border-style: none;
+  padding: 0.5rem
 }
 
 
@@ -166,10 +175,10 @@ body {
   border-radius: 2rem;
   padding: 1rem 2.5rem;
   /* color: white; */
-  box-shadow: 0px 0px 12px 0px #f9f9f9;
+  box-shadow: 0px 0px 12px 0px var(--nav-box-shadow);
   margin: 0 auto;
   width: fit-content;
-  background-color: #111;
+  background-color: var(--bg-color);
 
   display: flex;
   gap: 2rem;
