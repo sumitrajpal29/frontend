@@ -10,6 +10,12 @@
 
 <body>
   <div id="root"></div>
+  <script>
+    (function () {
+      var theme = localStorage.getItem('theme');
+      if (theme) document.body.className = theme;
+    })();
+  </script>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 

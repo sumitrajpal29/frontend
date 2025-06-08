@@ -1,18 +1,22 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope, FaMoon, FaSun } from 'react-icons/fa';
 
 export default function Nav() {
-    const [darkTheme, setDarkTheme] = useState(false);
-
-    const savedTheme = window.localStorage.theme;
-    document.body.className = savedTheme ? savedTheme : "";
+    const [theme, setTheme] = useState(() => window.localStorage.theme || '');
 
     function toggleTheme() {
-        setDarkTheme(!darkTheme);
-        window.localStorage.setItem('theme', darkTheme ? "" : "dark-theme");
+        // const newTheme = theme === undefined ? 'dark-theme' : undefined;
+
+        setTheme((prev) => prev === 'dark-theme' ? '' : 'dark-theme');
+        // document.body.className = newTheme;
+        // window.localStorage.setItem('theme', newTheme);
     }
+    useEffect(() => {
+        document.body.className = theme;
+        window.localStorage.setItem('theme', theme);
+    }, [theme]);
+
     return (
-        // <div>
         <nav className="nav-bar">
             <ul className="nav-list">
                 <li>
@@ -28,8 +32,9 @@ export default function Nav() {
                     <a href="#">Contact</a>
                 </li>
             </ul>
-            <button className='roundButton' onClick={toggleTheme}>{darkTheme ? <FaSun /> : <FaMoon />}</button>
+            <button className='roundButton' onClick={toggleTheme}>
+                {theme === '' ? <FaMoon /> : <FaSun />}
+            </button>
         </nav>
-        // </div>
     );
 }
