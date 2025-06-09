@@ -18,7 +18,7 @@ function App() {
           <Profile />
         </div>
         <div style={styleForText}>
-          <p>Hi, I’m Sumit Rajpal — a Full Stack Developer specializing in the MERN stack. I build scalable backends and intuitive frontends to deliver high-performance web applications with smooth, user-friendly experiences. Let’s collaborate and create something impactful! ⚙️🚀</p>
+          <p>Hi, I’m Sumit Rajpal — a Full Stack Developer specializing in the MERN stack. I build scalable backends and intuitive frontend to deliver high-performance web applications with smooth, user-friendly experiences. Let’s collaborate and create something impactful! ⚙️🚀</p>
         </div>
       </div>
       {/* <Skill /> */}

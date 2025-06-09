@@ -1,4 +1,4 @@
-import image from '../assets/react.svg';
+import image from '../../public/assets/react.svg';
 import '../App.css';
 
 
