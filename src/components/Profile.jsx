@@ -1,4 +1,4 @@
-import image from '../../public/assets/image.jpg';
+import image from '/assets/image.jpg';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { SiLeetcode } from "react-icons/si";
 
