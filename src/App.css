@@ -6,23 +6,10 @@
   /* text-align: center; */
 }
 
-/* index.css */
-:root {
-  --bg-color: white;
-  --text-color: black;
-  --nav-box-shadow: black;
-}
-
-.dark-theme {
-  --bg-color: #121212;
-  --text-color: white;
-  --nav-box-shadow: white;
-}
-
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
-  transition: background 0.7s, color 0.7s;
+  transition: background 0.5s, color 0.5s;
 }
 
 /* .roundButton {
@@ -209,22 +196,6 @@ body {
   } */
 
 }
-
-a:hover {
-  /* box-shadow: 0px 0px 12px 0px #695bb9; */
-  color: rgba(48, 98, 238, 0.523);
-  /* text-decoration: underline; */
-}
-
-/* @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-} */
-
-/* .read-the-docs {
-  color: #888;
-} */
 
 @media (max-width: 600px) {
   .main-content {

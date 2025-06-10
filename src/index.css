@@ -11,6 +11,17 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Variables for theme */
+  --bg-color: white;
+  --text-color: black;
+  --nav-box-shadow: black;
+}
+
+.dark-theme {
+  --bg-color: #121212;
+  --text-color: white;
+  --nav-box-shadow: white;
 }
 
 a {
@@ -57,7 +68,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -70,4 +81,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
